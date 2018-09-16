@@ -1,4 +1,4 @@
-#!/etc/php -q
+#!/usr/bin/php
 <?php
 
 #Variable declaration
