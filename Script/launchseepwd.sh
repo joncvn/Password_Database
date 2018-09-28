@@ -1,1 +1,0 @@
-php seepwd.php
