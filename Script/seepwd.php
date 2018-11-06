@@ -3,42 +3,43 @@
 
 #Variable declaration
 $time = date("l");
-$mon = fopen("/home/john/Desktop/Password_Database/Files/Monday_pwd","r") or die("Unable to open file!");
-$tue = fopen("/home/john/Desktop/Password_Database/Files/Tuesday_pwd","r") or die("Unable to open file!");
-$wed = fopen("/home/john/Desktop/Password_Database/Files/Wednesday_pwd","r") or die("Unable to open file!");
-$thu = fopen("/home/john/Desktop/Password_Database/Files/Thursday_pwd","r") or die("Unable to open file!");
-$fri = fopen("/home/john/Desktop/Password_Database/Files/Friday_pwd","r") or die("Unable to open file!");
-$sat = fopen("/home/john/Desktop/Password_Database/Files/Saturday_pwd","r") or die("Unable to open file!");
-$sun = fopen("/home/john/Desktop/Password_Database/Files/Sunday_pwd","r") or die("Unable to open file!");
+$path = "/home/john/Work/Password_Database";
+$mon = fopen("$path/Files/Monday_pwd","r") or die("Unable to open file!\n");
+$tue = fopen("$path/Files/Tuesday_pwd","r") or die("Unable to open file!\n");
+$wed = fopen("$path/Files/Wednesday_pwd","r") or die("Unable to open file!\n");
+$thu = fopen("$path/Files/Thursday_pwd","r") or die("Unable to open file!\n");
+$fri = fopen("$path/Files/Friday_pwd","r") or die("Unable to open file!\n");
+$sat = fopen("$path/Files/Saturday_pwd","r") or die("Unable to open file!\n");
+$sun = fopen("$path/Files/Sunday_pwd","r") or die("Unable to open file!\n");
 #End variable declaration
 
 #Script
 if ($time == "Monday"){
-	echo fread($mon,filesize("/home/john/Desktop/Password_Database/Files/Monday_pwd"));
+	echo fread($mon,filesize("$path/Files/Monday_pwd"));
 	fclose($mon);
 }
 elseif ($time == "Tuesday"){
-        echo fread($tue,filesize("/home/john/Desktop/Password_Database/Files/Tuesday_pwd"));
+        echo fread($tue,filesize("$path/Files/Tuesday_pwd"));
         fclose($tue);
 }
 elseif ($time == "Wednesday"){
-	echo fread($wed,filesize("/home/john/Desktop/Password_Database/Files/Wednesday_pwd"));
+	echo fread($wed,filesize("$path/Files/Wednesday_pwd"));
 	fclose($wed);
 }
 elseif ($time == "Thursday"){
-	echo fread($thu,filesize("/home/john/Desktop/Password_Database/Files/Thursday_pwd"));
+	echo fread($thu,filesize("$path/Files/Thursday_pwd"));
 	fclose($thu);
 }
 elseif ($time == "Friday"){
-	echo fread($fri,filesize("/home/john/Desktop/Password_Database/Files/Friday_pwd"));
+	echo fread($fri,filesize("$path/Files/Friday_pwd"));
 	fclose($fri);
 }
 elseif ($time == "Saturday"){
-	echo fread($sat,filesize("/home/john/Desktop/Password_Database/Files/Saturday_pwd"));
+	echo fread($sat,filesize("$path/Files/Saturday_pwd"));
 	fclose($sat);
 }
 elseif ($time == "Sunday"){
-	echo fread($sun,filesize("/home/john/Desktop/Password_Database/Files/Sunday_pwd"));
+	echo fread($sun,filesize("$path/Files/Sunday_pwd"));
 	fclose($sun);
 }
 else{
